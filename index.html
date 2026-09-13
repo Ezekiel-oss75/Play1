@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Divine Ages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div id="topbar">
+    <div class="res">🌾 <span id="res-food">0</span></div>
+    <div class="res">🪵 <span id="res-wood">0</span></div>
+    <div class="res">🪨 <span id="res-stone">0</span></div>
+    <div class="res">✨ <span id="res-faith">0</span></div>
+    <div class="res">👥 <span id="res-pop">0</span></div>
+    <div class="spacer"></div>
+    <div id="era-label">Каменный век</div>
+  </div>
+
+  <div id="bottombar">
+    <button id="btn-pause">⏸</button>
+    <button class="speed" data-speed="1">×1</button>
+    <button class="speed" data-speed="2">×2</button>
+    <button class="speed" data-speed="4">×4</button>
+    <div class="spacer"></div>
+    <div id="hint">WASD · колесо · клик</div>
+  </div>
+
+  <div id="sidebar">
+    <h3>Выбрано</h3>
+    <div id="selection">—</div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
