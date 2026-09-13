@@ -1,0 +1,93 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0e0e14;
+  color: #e8e8f0;
+  font-family: system-ui, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #1a1f2e;
+  touch-action: none;
+}
+
+/* Верхняя панель */
+#topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 44px;
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 12px;
+  background: rgba(10, 12, 22, 0.9);
+  border-bottom: 1px solid #2a3050;
+  font-size: 14px;
+  z-index: 10;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+#topbar .res { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+#topbar .spacer { flex: 1; min-width: 8px; }
+#era-label { font-weight: 600; color: #ffd479; flex-shrink: 0; }
+
+/* Нижняя панель */
+#bottombar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 44px;
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 12px;
+  background: rgba(10, 12, 22, 0.9);
+  border-top: 1px solid #2a3050;
+  z-index: 10;
+}
+#bottombar .spacer { flex: 1; }
+#bottombar button {
+  background: #232a44;
+  border: 1px solid #3a4370;
+  color: #e8e8f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+#bottombar button.active {
+  background: #ffd479;
+  color: #1a1f2e;
+  font-weight: 700;
+}
+#hint { font-size: 11px; color: #8a92b8; display: none; }
+@media (min-width: 700px) { #hint { display: block; } }
+
+/* Правая панель */
+#sidebar {
+  position: fixed;
+  top: 44px; right: 0; bottom: 44px;
+  width: 220px;
+  padding: 12px;
+  background: rgba(10, 12, 22, 0.9);
+  border-left: 1px solid #2a3050;
+  overflow-y: auto;
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  #sidebar { width: 150px; padding: 8px; font-size: 12px; }
+}
+#sidebar h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8a92b8;
+  margin-bottom: 8px;
+}
+#selection { font-size: 13px; line-height: 1.5; }
